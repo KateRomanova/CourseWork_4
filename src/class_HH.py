@@ -42,5 +42,5 @@ hh_api = HeadHunterApi()
 print(hh_api)
 
 # Получение вакансий с hh.ru в формате JSON
-hh_vacancies = hh_api.load_vacancies("разработчик")
+hh_vacancies = hh_api.load_vacancies("разработчик Python")
 print(hh_vacancies)
