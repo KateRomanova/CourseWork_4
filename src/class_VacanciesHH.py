@@ -9,6 +9,7 @@ class VacanciesHH:
         self.description = description
         self.requirements = requirements
 
+
     def __repr__(self):
         """Строковое представление объекта класса VacanciesHH"""
         return f"""
@@ -19,6 +20,7 @@ class VacanciesHH:
         Ссылка на вакансию: {self.link}
         """
 
+
     def __gt__(self, other):
         """Сравнивает вакансии между собой."""
         return self.salary_from > other.salary_from
@@ -27,3 +29,7 @@ class VacanciesHH:
         """Валидирует данные, которыми инициализируются атрибуты"""
         if not self.salary_from and not self.salary_to:
             self.salary_from = "Зарплата не указана"
+        elif not self.salary_from:
+            self.salary_from = "Зарплата не указана"
+        elif not self.salary_to:
+            self.salary_to = "Зарплата не указана"

@@ -36,11 +36,12 @@ class HeadHunterApi(Parser):
         #     self.params['page'] += 1
         #     print(response.json())
 
+if __name__ == '__main__':
 
-# Создание экземпляра класса для работы с API сайтов с вакансиями
-hh_api = HeadHunterApi()
-print(hh_api)
+    # Создание экземпляра класса для работы с API сайтов с вакансиями
+    hh_api = HeadHunterApi()
+    print(hh_api)
 
-# Получение вакансий с hh.ru в формате JSON
-hh_vacancies = hh_api.load_vacancies("разработчик Python")
-print(hh_vacancies)
+    # Получение вакансий с hh.ru в формате JSON
+    hh_vacancies = hh_api.load_vacancies("разработчик Python")
+    print(hh_vacancies)

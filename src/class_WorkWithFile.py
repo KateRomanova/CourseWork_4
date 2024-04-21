@@ -25,9 +25,9 @@ class SaveJson(WorkWithFile):
 
     def add_vacancy(self, vacancy_data):
         """Добавляет вакансии в файл json."""
-        with open(self.file_name, 'a') as file:
-            json.dump(vacancy_data, file)
-            file.write('\n')
+        with open(self.file_name, 'w') as file:
+            json.dump(vacancy_data, file, ensure_ascii=False)
+            # file.write('\n')
 
     def get_vacancy(self):
         """Получает данные по вакансиям из файла."""
