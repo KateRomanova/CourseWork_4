@@ -47,12 +47,13 @@ def user_interaction():
     ranged_vacancies = []
 
     for vacancy in filtered_vacancies:
-        if not vacancy.salary_from or not vacancy.salary_to or vacancy.salary_from <= salary_from_wish <= vacancy.salary_to\
-                and vacancy.salary_from <= salary_to_wish <= vacancy.salary_to:
+        if (not vacancy.salary_from or not vacancy.salary_to or vacancy.salary_from <= salary_from_wish
+                <= vacancy.salary_to and vacancy.salary_from <= salary_to_wish <= vacancy.salary_to):
             ranged_vacancies.append(vacancy)
 
     top_ranged_vacancies = ranged_vacancies[:top_n]
     print(top_ranged_vacancies)
+
 
 if __name__ == "__main__":
     user_interaction()

@@ -9,7 +9,6 @@ class VacanciesHH:
         self.description = description
         self.requirements = requirements
 
-
     def __repr__(self):
         """Строковое представление объекта класса VacanciesHH"""
         return f"""
@@ -19,7 +18,6 @@ class VacanciesHH:
         Требования: {self.requirements}
         Ссылка на вакансию: {self.link}
         """
-
 
     def __gt__(self, other):
         """Сравнивает вакансии между собой."""
