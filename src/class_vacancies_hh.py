@@ -26,8 +26,8 @@ class VacanciesHH:
     def validate_data(self):
         """Валидирует данные, которыми инициализируются атрибуты"""
         if not self.salary_from and not self.salary_to:
-            self.salary_from = "Зарплата не указана"
+            self.salary_from = 0
         elif not self.salary_from:
-            self.salary_from = "Зарплата не указана"
+            self.salary_from = 0
         elif not self.salary_to:
-            self.salary_to = "Зарплата не указана"
+            self.salary_to = 0
