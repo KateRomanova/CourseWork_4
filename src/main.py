@@ -33,7 +33,7 @@ def user_interaction():
 
     filtered_vacancies = filter_by_keyword(vacancies, filter_words)
     ranged_vacancies = filter_by_salary(filtered_vacancies, salary_range)
-    sorted_vacancies = sorted(ranged_vacancies)
+    sorted_vacancies = sorted(ranged_vacancies, reverse=True)
     top_ranged_vacancies = sorted_vacancies[:top_n]
     print(top_ranged_vacancies)
 

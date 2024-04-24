@@ -19,7 +19,6 @@ def filter_by_salary(filtered_vacancies, salary_range):
     ranged_vacancies = []
 
     for vacancy in filtered_vacancies:
-        if (not vacancy.salary_from or not vacancy.salary_to or vacancy.salary_from <= salary_from_wish
-                <= vacancy.salary_to and vacancy.salary_from <= salary_to_wish <= vacancy.salary_to):
+        if vacancy.salary_from >= salary_from_wish and vacancy.salary_from <= salary_to_wish:
             ranged_vacancies.append(vacancy)
     return ranged_vacancies
