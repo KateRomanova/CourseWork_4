@@ -25,7 +25,7 @@ def user_interaction():
             name=vacancy['name'],
             link=vacancy['url'],
             salary_from=vacancy['salary'].get('from') if vacancy['salary'] else 0,
-            salary_to=vacancy['salary'].get('to') if vacancy['salary'] else '',
+            salary_to=vacancy['salary'].get('to') if vacancy['salary'] else 0,
             currency=vacancy['salary'].get('currency') if vacancy['salary'] else '',
             description=vacancy['snippet']['responsibility'],
             requirements=vacancy['snippet']['requirement'])
@@ -33,7 +33,7 @@ def user_interaction():
 
     filtered_vacancies = filter_by_keyword(vacancies, filter_words)
     ranged_vacancies = filter_by_salary(filtered_vacancies, salary_range)
-    sorted_vacancies = sorted(ranged_vacancies, key=__gt__)
+    sorted_vacancies = sorted(ranged_vacancies)
     top_ranged_vacancies = sorted_vacancies[:top_n]
     print(top_ranged_vacancies)
 
